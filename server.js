@@ -6,25 +6,27 @@ const server = express();
 
 // bring in middleware tools
 const helmet = require('helmet');
-const cors = require('cors');
+const cors = require('cors')
+// const port = 3000;
 
 // middleware
-server.use(express.json);
+server.use(express.json());
 server.use(cors());
 server.use(helmet());
 server.use(logger)
 
 // bring in route
-// const UserRoute = require('/routes/UsersRoute');
-// server.use('/clients', UserRoute);
+const UserRoute = require('./routes/UsersRoute');
+server.use('/', UserRoute);
+
 
 server.get('/', (req, res) => {
-    res.send("This is a test page")
+  res.send("This is the taco page")
 })
 
-function logger(req, res, next){
-    console.log(`${req.method} Request`)
-    next();
-}
 
+function logger(req, res, next){
+  console.log(`${req.method} Request`)
+  next();
+}
 module.exports = server;
