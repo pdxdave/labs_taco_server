@@ -1,0 +1,27 @@
+{
+  "name": "labs_taco_server",
+  "version": "1.0.0",
+  "description": "test server for labs taco application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdxdave/labs_taco_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdxdave/labs_taco_server/issues"
+  },
+  "homepage": "https://github.com/pdxdave/labs_taco_server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.19.0",
+    "knex": "^0.19.1",
+    "nodemon": "^1.19.1",
+    "sqlite3": "^4.0.9"
+  }
+}
