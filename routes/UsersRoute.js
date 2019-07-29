@@ -13,7 +13,7 @@ const Users = require('../models/UsersModel');
 
 
 // Find All Users
-router.get('/users', async (req, res) => {
+router.get('/user-list', async (req, res) => {
     try {
         const test = await Users.find()
         res.status(200).json(test)
@@ -54,7 +54,7 @@ router.post('/add', async (req, res) => {
             })
         } else {
             const test = await Users.add(req.body)
-            res.status(200).json(test)
+            res.status(201).json(test)
         }
     } catch (error) {
         res.status(500).json({
@@ -94,14 +94,13 @@ router.put('/update/:id', async (req, res) => {
 router.delete('/remove/:id', async (req, res) => {
     try {
         const id = req.params.id;
-        const test = await Users.remove(id) // ?
         if(!id){
             res.status(404).json({
                 message: "There is no ID by that number"
             })
         } else {
-            const clients = await Users.find()
-            res.status(200).json(clients)
+            const test = await Users.remove(id)
+            res.status(200).json(test)
         }
     } catch (error) {
         res.status(500).json({
