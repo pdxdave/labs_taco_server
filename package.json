@@ -19,7 +19,7 @@
   "homepage": "https://github.com/pdxdave/labs_taco_server#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "helmet": "^3.19.0",
     "jest": "^24.8.0",
     "knex": "^0.19.1",
